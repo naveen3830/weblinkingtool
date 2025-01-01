@@ -102,13 +102,7 @@ st.markdown(
             color: #1cb3e0 !important;
         }
         </style>
-        div.stAlert {
-        color: #000000 !important;
-        background-color: #fff3cd !important;
-        }
-        div.stAlert p {
-            color: #000000 !important;
-        }
+
         """,
         unsafe_allow_html=True
     )
@@ -186,14 +180,7 @@ def authenticate_user():
             }
             .stWarning div[data-testid="StyledLinkIconContainer"] {
                 color: #000000 !important;
-            }
-            div.stAlert {
-                color: #000000 !important;
-                background-color: #fff3cd !important;
-            }
-            div.stAlert p {
-                color: #000000 !important;
-            }
+            }        
             </style>
             
         """, unsafe_allow_html=True)
