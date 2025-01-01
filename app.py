@@ -14,7 +14,7 @@ import hashlib
 from config import AUTHORIZED_USERS  
 
 
-st.set_page_config(page_title="Internal Linking Opportunities", layout="centered")
+st.set_page_config(page_title="Internal Linking Opportunities", layout="wide")
 
 st.markdown(
         """
@@ -111,15 +111,45 @@ def creds_entered():
         else:
             st.error("Invalid Username/Password :face_with_raised_eyebrow:")
 
-def authenticate_user(): 
+def authenticate_user():
     if "authenticated" not in st.session_state:
         st.session_state["authenticated"] = False
         st.session_state["username"] = None
     
     if not st.session_state["authenticated"]:
-        col1, col2 = st.columns([1, 2])
-        with col1:
-            st.subheader("Login")
+        st.markdown("""
+            <style>
+            .stApp {
+                background-color: #f3f4f6;
+            }
+            div[data-testid="stVerticalBlock"] {
+                padding: 2rem;
+                max-width: 28rem;
+                margin: 0 auto;
+            }
+            .stTextInput > div > div {
+                background-color: #ffffff;
+                color: #1f2937;
+                border: 1px solid #d1d5db;
+                border-radius: 0.375rem;
+            }
+            .stTextInput > label {
+                color: #374151;
+                font-weight: 500;
+            }
+            .stButton > button {
+                background-color: #2563eb;
+                color: white;
+                width: 100%;
+            }
+            .stButton > button:hover {
+                background-color: #1d4ed8;
+            }
+            </style>
+        """, unsafe_allow_html=True)
+        
+        with st.container():
+            st.markdown('<div style="text-align: center; margin-bottom: 2rem;"><h1 style="color: #1f2937;">Welcome Back</h1><p style="color: #4b5563;">Please sign in to continue</p></div>', unsafe_allow_html=True)
             st.text_input(label="Username:", value="", key="user", on_change=creds_entered)
             st.text_input(label="Password:", value="", key="passwd", type="password", on_change=creds_entered)
         return False
@@ -153,7 +183,6 @@ def main():
                 logout()
                 st.rerun()
 
-        # Load respective page based on user selection
         if selected == "URL Extractor":
             link()
         elif selected == "Keyword Analysis":
