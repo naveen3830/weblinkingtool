@@ -11,14 +11,14 @@ from streamlit_option_menu import option_menu
 from demo import Home
 from link import link
 import hashlib
-# from config import AUTHORIZED_USERS  
+
+
+st.set_page_config(page_title="Internal Linking Opportunities", layout="wide")
 
 AUTHORIZED_USERS = {
     username: password 
     for username, password in st.secrets.auth.items()
 }
-
-st.set_page_config(page_title="Internal Linking Opportunities", layout="wide")
 
 st.markdown(
         """
