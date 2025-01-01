@@ -85,7 +85,7 @@ st.markdown(
         }
         
         .stWarning{
-            color: #1cb3e0 !important;
+            color: #000000 !important;
         }
 
         /* Spinner styling */
