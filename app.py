@@ -24,6 +24,7 @@ st.markdown(
         """
         <style>
         /* Main container adjustments */
+        
         .main {
             background-color: #222f3b;
             color: #d2d2d6;
@@ -84,10 +85,18 @@ st.markdown(
             padding: 8px;
         }
         
-        .stWarning{
+        .stWarning {
+        color: #000000 !important;
+        }
+        .stWarning > div {
             color: #000000 !important;
         }
-
+        .stWarning p {
+            color: #000000 !important;
+        }
+        .stWarning div[data-testid="StyledLinkIconContainer"] {
+            color: #000000 !important;
+        }
         /* Spinner styling */
         .stSpinner {
             color: #1cb3e0 !important;
