@@ -83,6 +83,10 @@ st.markdown(
             border-radius: 4px;
             padding: 8px;
         }
+        
+        .stWarning{
+            color: #1cb3e0 !important;
+        }
 
         /* Spinner styling */
         .stSpinner {
