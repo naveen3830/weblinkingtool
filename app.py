@@ -137,6 +137,9 @@ def authenticate_user():
                 border: 1px solid #d1d5db;
                 border-radius: 0.375rem;
             }
+            .stTextInput input {
+            color: #000000 !important;
+            }
             .stTextInput > label {
                 color: #374151;
                 font-weight: 500;
