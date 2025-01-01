@@ -11,7 +11,7 @@ from streamlit_option_menu import option_menu
 from demo import Home
 from link import link
 import hashlib
-from config import AUTHORIZED_USERS  
+# from config import AUTHORIZED_USERS  
 
 
 st.set_page_config(page_title="Internal Linking Opportunities", layout="wide")
